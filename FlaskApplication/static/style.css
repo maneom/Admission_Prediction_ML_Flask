@@ -1,0 +1,59 @@
+body{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img_background.jpeg");
+    background-size: cover;
+}
+.content{
+    width: 75%;
+    height: 90%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.div-title{
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(208, 196, 231);
+}
+.div-form{
+    height: 75%;
+    width: 85%;
+    border: solid;
+    text-align:center;
+}
+p{
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-shadow: 2%;
+}
+.rate{
+    width: 5%;
+}
+#gers, #toefl, #lor, #cgpa{
+    width:max-content;
+}
+.submit-button{
+    width: 20%;
+    height: 15%;
+    background-color: #d3d1c1;
+    border-radius: 15%;
+}
+input, select{
+    background-color: #d3d1c1;
+    color:#312F23;
+}
+input:hover, select:hover{
+    background-color: white;
+}
+.output-text{
+    color: rgb(210, 250, 30);
+    background-color: rgb(163, 122, 240);
+}

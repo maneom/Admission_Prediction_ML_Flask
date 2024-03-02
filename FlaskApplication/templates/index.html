@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ADMISSION PREDICTION</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="content">
+
+        <div class="div-title">
+            <h1>ADMISSION PREDICTION</h1>
+        <br>
+        </div>
+        <div class="div-form">
+        <div class="form">
+            <form action="/" method="Post">
+
+                <label for="gres">
+                    <p>Enter GRES score  <input type="text" name="gres" id="gres" placeholder="out of 340"></p>     
+                </label>
+
+                <label for="gres">
+                    <p>Enter TOEFL score <input type="text" name="toefl" id="toefl" placeholder="out of 120"></p>
+                </label>
+
+                
+                <p>Select University Rating
+                    <select name="rating" class="rate">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option></p>
+                </select>
+
+                <label for="sop">
+                    <p>Enter SOP <input type="text" name="sop" id="sop" placeholder="eg. 2.5"></p>
+                </label>
+            
+                <label for="lor">
+                    <p>Enter LOR <input type="text" name="lor" id="lor" placeholder="eg. 2.5"></p>
+                </label>
+
+                <label for="cgpa">
+                    <p>Enter CGPA <input type="text" name="cgpa" id="cgpa" placeholder="eg. 8.65"></p> 
+                </label>
+
+                <p>Select one of following
+                <label for="1">
+                    <input type="radio" value="1" name="research" id="1" checked> Writtrn Research Paper
+                </label>
+                <label for="0">
+                    <input type="radio" value="0" name="research" id="0"> Not Writtrn Research Paper</p>
+                </label>
+
+                <input type="submit" value="Submit" class="submit-button">
+            </form>
+        </div>
+
+        <div>
+            {% if prediction == -2 %}
+                <h2 class="output-text"> PLEASE ENTER VALID DATA </h2>
+            {% elif prediction != -1 %}
+                <h2 class="output-text">YOUR CHANCES OF GETTING ADMISSION ARE {{prediction}}%</h2>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+</body>
+</html>
